@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE LAST SIGNAL — A Digital Museum of Forgotten Space Machines | NASA Space Apps Challenge 2026</title>
+  <meta name="description" content="Explore NASA's discarded equipment on the Moon and Mars. A digital space museum developed by Team ASTRAVYN for NASA Space Apps Challenge 2026.">
+  <meta name="theme-color" content="#000510">
+
+  <!-- Google Fonts: Orbitron (Headings) & Exo 2 (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       1. NAVIGATION BAR
+       ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="The Last Signal Home">
+        <span class="nav-logo-icon">📡</span>
+        <span class="nav-logo-text">THE LAST SIGNAL</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#moon-archives" class="nav-link">Moon Archives</a></li>
+        <li><a href="#mars-archives" class="nav-link">Mars Archives</a></li>
+        <li><a href="#mission-stories" class="nav-link">Mission Stories</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="nav-mobile" aria-label="Mobile Navigation">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#moon-archives" class="nav-link">Moon Archives</a>
+    <a href="#mars-archives" class="nav-link">Mars Archives</a>
+    <a href="#mission-stories" class="nav-link">Mission Stories</a>
+    <a href="#last-words" class="nav-link">The Last Words</a>
+    <a href="#timeline" class="nav-link">Timeline</a>
+    <a href="#then-now" class="nav-link">Then &amp; Now</a>
+    <a href="#quiz" class="nav-link">Space Quiz</a>
+    <a href="#space-legacy" class="nav-link">Space Legacy</a>
+    <a href="#references" class="nav-link">References</a>
+  </div>
+
+  <!-- ============================================================
+       2. HERO SECTION
+       ============================================================ -->
+  <header id="home" class="section hero">
+    <!-- Starfield and cosmic nebula background -->
+    <canvas id="stars-canvas" aria-hidden="true"></canvas>
+    <div class="hero-nebula" aria-hidden="true"></div>
+
+    <div class="hero-content fade-in-up">
+      <div class="hero-eyebrow">NASA SPACE APPS CHALLENGE 2026 &bull; TEAM ASTRAVYN</div>
+      <h1 class="hero-title">THE LAST SIGNAL</h1>
+      <p class="hero-subtitle">
+        They never returned. Their discoveries changed our understanding of the universe.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#moon-archives" class="btn btn-primary">Explore Moon</a>
+        <a href="#mars-archives" class="btn btn-secondary">Explore Mars</a>
+      </div>
+
+      <!-- Live Mission Counter Strip -->
+      <div class="modal-stat-row" style="margin-top: 50px; justify-content: center; gap: 30px;">
+        <div class="modal-stat">
+          <div class="modal-stat-value" data-count-to="6">0</div>
+          <div class="modal-stat-label">Lunar Landing Sites</div>
+        </div>
+        <div class="modal-stat">
+          <div class="modal-stat-value" data-count-to="10">0</div>
+          <div class="modal-stat-label">Artifacts Preserved</div>
+        </div>
+        <div class="modal-stat">
+          <div class="modal-stat-value" data-count-to="55">0</div>
+          <div class="modal-stat-label">Years of Lunar Lasers</div>
+        </div>
+        <div class="modal-stat">
+          <div class="modal-stat-value" data-count-to="53">0</div>
+          <div class="modal-stat-label">km Driven Across Mars</div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>DESCEND TO SURFACE</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       3. MOON ARCHIVES SECTION
+       ============================================================ -->
+  <section id="moon-archives" class="section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">LUNAR SURFACE RELICS</span>
+        <h2 class="section-title">MOON ARCHIVES</h2>
+        <p class="section-subtitle">
+          Humanity's first monuments on another celestial body, standing in the pristine airless vacuum of the Moon.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1: Apollo LM -->
+        <article class="equipment-card fade-in-up delay-1" data-equipment-key="apollo-lm">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/640px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg" alt="Apollo Lunar Module Descent Stage" loading="lazy">
+            <span class="card-status-dot active" title="Preserved on surface"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-cyan">Apollo 11–17</span>
+              <span class="tag tag-purple">6 Descent Stages</span>
+            </div>
+            <h3 class="card-title">Apollo LM Descent Stages</h3>
+            <p class="card-desc">
+              Six gold-mylar clad platforms left at Tranquility Base, Fra Mauro, and Taurus-Littrow. Serving as launchpads to bring astronauts home, they remain upright monuments on the lunar regolith.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">1969–1972</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="apollo-lm">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Lunar Rover -->
+        <article class="equipment-card fade-in-up delay-2" data-equipment-key="lunar-rover">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Apollo_15_Lunar_Rover.jpg/640px-Apollo_15_Lunar_Rover.jpg" alt="Apollo Lunar Roving Vehicle" loading="lazy">
+            <span class="card-status-dot active" title="Parked on surface"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-cyan">Apollo 15, 16, 17</span>
+              <span class="tag tag-orange">3 Rovers</span>
+            </div>
+            <h3 class="card-title">Lunar Roving Vehicle (LRV)</h3>
+            <p class="card-desc">
+              Electric off-road buggies that expanded human exploration range to over 20 km. Three vehicles remain parked at Hadley Rille, Descartes, and Taurus-Littrow, their color cameras filming the final crewed ascents.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">1971–1972</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="lunar-rover">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: ALSEP -->
+        <article class="equipment-card fade-in-up delay-3" data-equipment-key="alsep">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Apollo_12_ALSEP.jpg/640px-Apollo_12_ALSEP.jpg" alt="Apollo ALSEP Package" loading="lazy">
+            <span class="card-status-dot" title="Transmitted until 1977"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-violet">Apollo 12–17</span>
+              <span class="tag tag-purple">Nuclear Powered</span>
+            </div>
+            <h3 class="card-title">Apollo Science Packages (ALSEP)</h3>
+            <p class="card-desc">
+              Central stations powered by SNAP-27 radioisotope generators. Deployed across five sites, they continuously transmitted moonquake and solar wind data for 8 years until NASA decommissioned receivers in 1977.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">1969–1977</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="alsep">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Retroreflectors -->
+        <article class="equipment-card fade-in-up delay-4" data-equipment-key="retroreflectors">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Apollo_11_Lunar_Laser_Ranging_Experiment.jpg/640px-Apollo_11_Lunar_Laser_Ranging_Experiment.jpg" alt="Lunar Laser Retroreflector" loading="lazy">
+            <span class="card-status-dot active" title="Active today"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-cyan">Apollo 11, 14, 15</span>
+              <span class="tag tag-cyan">Still In Use</span>
+            </div>
+            <h3 class="card-title">Lunar Laser Retroreflectors</h3>
+            <p class="card-desc">
+              Passive arrays of fused silica corner cubes that require no electrical power. Observatories worldwide fire lasers at them to this day, measuring the Earth-Moon distance down to millimeter precision.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">1969–Present</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="retroreflectors">Read Story</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. MARS ARCHIVES SECTION
+       ============================================================ -->
+  <section id="mars-archives" class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">RED PLANET EXPLORERS</span>
+        <h2 class="section-title">MARS ARCHIVES</h2>
+        <p class="section-subtitle">
+          Six robotic explorers that endured sub-zero nights, global dust storms, and shifting sands to unlock the history of Mars.
+        </p>
+      </div>
+
+      <div class="cards-grid cards-grid-6">
+        <!-- Mars 1: Spirit -->
+        <article class="equipment-card fade-in-up delay-1" data-equipment-key="spirit">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/640px-NASA_Mars_Rover.jpg" alt="Spirit Rover" loading="lazy">
+            <span class="card-status-dot" title="Silent since 2010"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-orange">MER-A</span>
+              <span class="tag tag-purple">7.73 km</span>
+            </div>
+            <h3 class="card-title">Spirit Rover</h3>
+            <p class="card-desc">
+              Overcame a paralyzed front wheel to discover pure silica deposits at Home Plate — direct evidence of ancient hydrothermal springs and hospitable water on early Mars.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">2004–2010</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="spirit">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mars 2: Opportunity -->
+        <article class="equipment-card fade-in-up delay-2" data-equipment-key="opportunity">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Opportunity_at_Endurance_Crater.jpg/640px-Opportunity_at_Endurance_Crater.jpg" alt="Opportunity Rover" loading="lazy">
+            <span class="card-status-dot" title="Silent since 2018"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-orange">MER-B</span>
+              <span class="tag tag-cyan">45.16 km</span>
+            </div>
+            <h3 class="card-title">Opportunity Rover</h3>
+            <p class="card-desc">
+              The marathon machine of Mars. Operating for nearly 15 years, it found hematite spherules ('blueberries') and water-altered rocks before the catastrophic 2018 global dust storm.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">2004–2018</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="opportunity">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mars 3: Sojourner -->
+        <article class="equipment-card fade-in-up delay-3" data-equipment-key="sojourner">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sojourner_on_Mars_annotated.jpg/640px-Sojourner_on_Mars_annotated.jpg" alt="Sojourner Rover" loading="lazy">
+            <span class="card-status-dot" title="Silent since 1997"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-cyan">First Rover</span>
+              <span class="tag tag-purple">10.6 kg</span>
+            </div>
+            <h3 class="card-title">Sojourner Rover</h3>
+            <p class="card-desc">
+              Humanity's first roving ambassador on another world. Measuring just 65 cm long, it proved mobile planetary exploration was possible and analyzed volcanic rocks in Ares Vallis.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">1997</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="sojourner">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mars 4: Pathfinder Lander -->
+        <article class="equipment-card fade-in-up delay-4" data-equipment-key="pathfinder">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mars_Pathfinder_Lander.jpg/640px-Mars_Pathfinder_Lander.jpg" alt="Mars Pathfinder Lander" loading="lazy">
+            <span class="card-status-dot" title="Silent since 1997"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-violet">Discovery</span>
+              <span class="tag tag-orange">Airbag Landing</span>
+            </div>
+            <h3 class="card-title">Pathfinder Lander</h3>
+            <p class="card-desc">
+              Pioneered the airbag cushioning landing system and deployed Sojourner. Renamed the Carl Sagan Memorial Station, it returned 16,500 images and 2.3 billion bits of telemetry.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">1997</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="pathfinder">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mars 5: Phoenix -->
+        <article class="equipment-card fade-in-up delay-5" data-equipment-key="phoenix">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Phoenix_Lander_on_Mars.jpg/640px-Phoenix_Lander_on_Mars.jpg" alt="Phoenix Lander" loading="lazy">
+            <span class="card-status-dot" title="Silent since 2008"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-cyan">Arctic Plain</span>
+              <span class="tag tag-cyan">Confirmed Ice</span>
+            </div>
+            <h3 class="card-title">Phoenix Lander</h3>
+            <p class="card-desc">
+              Landed near the Martian north pole and dug into the permafrost, becoming the first mission to directly touch and vaporize water ice on Mars before being entombed by winter frost.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">2008</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="phoenix">Read Story</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mars 6: InSight -->
+        <article class="equipment-card fade-in-up delay-6" data-equipment-key="insight">
+          <div class="card-image-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/InSight_lander_on_Mars.jpg/640px-InSight_lander_on_Mars.jpg" alt="InSight Lander" loading="lazy">
+            <span class="card-status-dot" title="Silent since 2022"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-purple">Geophysics</span>
+              <span class="tag tag-orange">1,319 Quakes</span>
+            </div>
+            <h3 class="card-title">InSight Lander</h3>
+            <p class="card-desc">
+              Listened to the deep heartbeat of Mars. Using its ultra-sensitive dome seismometer, InSight detected over 1,300 marsquakes and mapped Mars' crust, mantle, and molten liquid core.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">2018–2022</span>
+              <button class="btn btn-sm btn-primary read-story-btn" data-equipment-key="insight">Read Story</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. INDIVIDUAL MISSION STORIES SECTION
+       ============================================================ -->
+  <section id="mission-stories" class="section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">COMPREHENSIVE PROFILES</span>
+        <h2 class="section-title">MISSION STORIES</h2>
+        <p class="section-subtitle">
+          In-depth technical history, scientific breakthroughs, final known telemetry, and enduring significance of each space machine.
+        </p>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="story-tabs fade-in-up">
+        <button class="story-tab active" data-target="story-apollo-lm">Apollo LM</button>
+        <button class="story-tab" data-target="story-lunar-rover">Lunar Rover</button>
+        <button class="story-tab" data-target="story-alsep">ALSEP</button>
+        <button class="story-tab" data-target="story-retro">Retroreflectors</button>
+        <button class="story-tab" data-target="story-spirit">Spirit Rover</button>
+        <button class="story-tab" data-target="story-opportunity">Opportunity</button>
+        <button class="story-tab" data-target="story-sojourner">Sojourner</button>
+        <button class="story-tab" data-target="story-pathfinder">Pathfinder</button>
+        <button class="story-tab" data-target="story-phoenix">Phoenix</button>
+        <button class="story-tab" data-target="story-insight">InSight</button>
+      </div>
+
+      <!-- Story Panels -->
+      <div class="story-panels-container">
+
+        <!-- Panel 1: Apollo LM -->
+        <div id="story-apollo-lm" class="story-panel active">
+          <div class="story-panel-header">
+            <h2>Apollo Lunar Module Descent Stages</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-cyan">Apollo 11 through 17</span>
+              <span class="tag tag-purple">6 Descent Stages on Moon</span>
+              <span class="final-status active">Resting Intact at Landing Sites</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Provide powered deceleration and landing guidance from lunar orbit to the Moon's surface, support astronauts during lunar surface operations, and serve as an unyielding launch platform for the ascent stage.</p>
+          <p><strong>Scientific &amp; Engineering Achievements:</strong> Demonstrated the first crewed landings on an extraterrestrial body. Carried scientific payloads (ALSEP, cameras, rovers) and insulated crew consumables. Built without aerodynamic surfaces, it was the first true spacecraft engineered exclusively for the vacuum of space.</p>
+          <p><strong>Mission History:</strong> Six descent stages touched down between July 20, 1969 (Apollo 11 Eagle) and December 11, 1972 (Apollo 17 Challenger). In every mission, the descent engine fired for approximately 12 minutes to bleed orbital velocity, touching down with four leg pads cushioned by crushable aluminum honeycomb.</p>
+          <p><strong>Final Known Status:</strong> Photographed repeatedly by NASA's Lunar Reconnaissance Orbiter (LRO) at 0.5-meter resolution. The descent stages, equipment pallets, and astronaut walking paths remain clearly visible in the lunar dust, perfectly preserved by the absence of wind, water, or atmospheric weather.</p>
+          <p><strong>Historical Significance:</strong> They represent humanity's first footprint on another celestial body. Under international space law and the US One Small Step Act, these sites are recognized as cultural and archeological treasures of all humankind.</p>
+        </div>
+
+        <!-- Panel 2: Lunar Rover -->
+        <div id="story-lunar-rover" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Apollo Lunar Roving Vehicle (LRV)</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-cyan">Apollo 15, 16, 17</span>
+              <span class="tag tag-orange">3 Vehicles Preserved</span>
+              <span class="final-status active">Parked on Lunar Surface</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Expand the operational radius of lunar exploration from a few hundred meters on foot to tens of kilometers, carrying geological tools, rock boxes, and high-gain communication antennas.</p>
+          <p><strong>Scientific Achievements:</strong> Enabled astronauts to reach deep geological formations including Hadley Rille, Descartes Highlands, and Taurus-Littrow. Apollo 17's rover carried crew members across 35.9 km, helping collect the famous orange volcanic soil (pyroclastic glass beads proving lunar volcanism).</p>
+          <p><strong>Mission History:</strong> Built by Boeing and Delco with woven zinc-coated wire tires and individual 0.25-horsepower electric motors per wheel. Folded into an origami-like quadrant on the LM descent stage, it was deployed in minutes via pulleys.</p>
+          <p><strong>Final Known Status:</strong> The three LRVs sit exactly where the astronauts parked them. On Apollo 17, Gene Cernan parked LRV-3 roughly 100 meters east of the Challenger ascent module so its ground-controlled television camera could broadcast their liftoff back to Earth.</p>
+          <p><strong>Historical Significance:</strong> The first crewed automobiles driven on another world. Their battery compartments and instrumentation stand as benchmarks for evaluating 50+ years of solar radiation exposure.</p>
+        </div>
+
+        <!-- Panel 3: ALSEP -->
+        <div id="story-alsep" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Apollo Lunar Surface Experiments Package (ALSEP)</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-violet">Apollo 12, 14, 15, 16, 17</span>
+              <span class="tag tag-purple">Radioisotope Powered</span>
+              <span class="final-status silent">Receivers Decommissioned (1977)</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Conduct long-duration scientific experiments on the lunar surface, gathering geophysics, solar radiation, and atmosphere data for years after the astronauts returned to Earth.</p>
+          <p><strong>Scientific Achievements:</strong> Passive Seismometer Arrays recorded over 12,000 seismic events, proving the Moon possesses a differentiated crust and deep moonquakes triggered by Earth's gravitational tides. Suprathermal Ion Detectors mapped the interaction between lunar regolith and the solar wind.</p>
+          <p><strong>Mission History:</strong> Five ALSEP stations were deployed. Powered by SNAP-27 plutonium radioisotope thermoelectric generators (RTGs), the stations were designed to operate for 1 year but functioned flawlessly for up to 8 years.</p>
+          <p><strong>Final Known Status:</strong> On September 30, 1977, NASA formally switched off the ground receiving stations due to budgetary constraints, though the nuclear generators were still supplying sufficient power. The physical stations remain intact at all five landing sites.</p>
+          <p><strong>Historical Significance:</strong> The first networked planetary geophysics laboratory deployed on an alien world, producing scientific discoveries cited in planetary literature to this day.</p>
+        </div>
+
+        <!-- Panel 4: Retroreflectors -->
+        <div id="story-retro" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Lunar Laser Retroreflectors</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-cyan">Apollo 11, 14, 15 &bull; Luna 17, 21</span>
+              <span class="tag tag-cyan">Continuous Operation</span>
+              <span class="final-status active">Actively Pinged Today (2026)</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Provide high-precision laser ranging targets to calculate the exact distance between Earth and the Moon over decades.</p>
+          <p><strong>Scientific Achievements:</strong> Confirmed Einstein's General Theory of Relativity with extraordinary precision; discovered that the Moon has a fluid core; proved the Moon is spiraling away from Earth at 3.8 cm per year due to tidal dissipation.</p>
+          <p><strong>Mission History:</strong> Apollo 11's Neil Armstrong and Buzz Aldrin set up the first 100-prism array. Apollo 14 and 15 added larger arrays (Apollo 15 having 300 corner-cube reflectors). Soviet rovers Lunokhod 1 &amp; 2 also carry French-built retroreflectors.</p>
+          <p><strong>Final Known Status:</strong> 100% operational. Because they are completely passive optical prisms requiring no electronics or power, they function identically today as they did in 1969, reflecting pulses back to observatories in Texas, France, and Germany.</p>
+          <p><strong>Historical Significance:</strong> The only Apollo experiment actively collecting operational science data today — over half a century after human boots left the Moon.</p>
+        </div>
+
+        <!-- Panel 5: Spirit Rover -->
+        <div id="story-spirit" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Spirit Rover (MER-A)</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-orange">Landed Jan 4, 2004</span>
+              <span class="tag tag-purple">Gusev Crater</span>
+              <span class="final-status silent">Final Transmission: March 22, 2010</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Search for and characterize a wide range of rocks and soils that hold clues to past water activity on Mars.</p>
+          <p><strong>Scientific Achievements:</strong> Discovered nearly 90% pure silica in the Columbia Hills. Silica of this purity forms only in boiling hot spring waters or volcanic fumaroles — direct confirmation that ancient Mars had geothermal activity capable of harboring microbial life.</p>
+          <p><strong>Mission History:</strong> Built for a 90-sol design lifetime. In 2006, its right-front wheel seized. Engineers cleverly drove Spirit backwards, dragging the dead wheel. In May 2009, Spirit broke through a crust of soil into loose sulphate-rich sands at 'Troy'.</p>
+          <p><strong>Final Known Status:</strong> Trapped at an unfavorable tilt for solar panels during the harsh Martian winter. Last signal received March 22, 2010. NASA concluded recovery efforts in May 2011 after over 1,200 listening attempts.</p>
+          <p><strong>Historical Significance:</strong> Spirit traveled 7.73 km (more than 12 times its design goal), demonstrating unprecedented endurance and proving that Mars was once warm, wet, and geologically dynamic.</p>
+        </div>
+
+        <!-- Panel 6: Opportunity Rover -->
+        <div id="story-opportunity" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Opportunity Rover (MER-B)</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-orange">Landed Jan 25, 2004</span>
+              <span class="tag tag-cyan">Meridiani Planum</span>
+              <span class="final-status silent">Final Transmission: June 10, 2018</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Examine layered sedimentary outcrops in craters across Meridiani Planum to investigate whether liquid water was sustained long enough to support life.</p>
+          <p><strong>Scientific Achievements:</strong> Discovered hematite-rich concretions dubbed 'Martian blueberries' formed in groundwater; found clay minerals indicating ancient pH-neutral, drinkable water; examined deep strata inside Endurance, Victoria, and Endeavour craters.</p>
+          <p><strong>Mission History:</strong> Traveled an astonishing 45.16 km (28.06 miles) — the off-world driving record for any wheeled vehicle. Surviving for 5,111 sols (over 55 times its warranty), its solar panels were repeatedly cleaned by serendipitous Martian dust devils.</p>
+          <p><strong>Final Known Status:</strong> In June 2018, a catastrophic global dust storm blotted out the sun, reducing solar energy to 1% of normal. Its final telemetry reported atmospheric opacity (tau) above 10.8. NASA attempted contact more than 1,000 times before formally declaring the mission complete on February 13, 2019.</p>
+          <p><strong>Historical Significance:</strong> The greatest endurance mission in robotic history. Opportunity redefined our view of Mars from an arid desert to a world that once had lakes, rivers, and active hydrology.</p>
+        </div>
+
+        <!-- Panel 7: Sojourner Rover -->
+        <div id="story-sojourner" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Sojourner Rover</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-cyan">Landed July 4, 1997</span>
+              <span class="tag tag-purple">Ares Vallis</span>
+              <span class="final-status silent">Final Transmission: Sept 27, 1997</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Validate that an autonomous, solar-powered rover could maneuver safely across Martian rocky terrain while delivering science instruments directly to targets.</p>
+          <p><strong>Scientific Achievements:</strong> Used its Alpha Proton X-ray Spectrometer (APXS) to analyze rocks 'Barnacle Bill' and 'Yogi', proving the presence of high-silica andesitic rocks formed by complex volcanic processes and ancient water-rich magmas.</p>
+          <p><strong>Mission History:</strong> Weighed just 10.6 kg and rolled down ramps from the Pathfinder lander on July 5, 1997. It logged over 100 meters of travel across 83 sols (planned for only 7 sols).</p>
+          <p><strong>Final Known Status:</strong> In late September 1997, the Pathfinder base station battery failed, severing the communication relay to Earth. Sojourner's programming instructed it to circle the lander indefinitely until its own batteries expired.</p>
+          <p><strong>Historical Significance:</strong> The pioneer that started the rover age on Mars. Every rover that followed — Spirit, Opportunity, Curiosity, and Perseverance — traces its heritage to Sojourner.</p>
+        </div>
+
+        <!-- Panel 8: Pathfinder Lander -->
+        <div id="story-pathfinder" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Mars Pathfinder Lander (Carl Sagan Memorial Station)</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-violet">Landed July 4, 1997</span>
+              <span class="tag tag-orange">Ares Vallis</span>
+              <span class="final-status silent">Final Transmission: Sept 27, 1997</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Demonstrate a low-cost 'Faster, Better, Cheaper' direct atmospheric entry and innovative airbag-cushioned landing system on Mars, while serving as the primary radio relay for Sojourner.</p>
+          <p><strong>Scientific Achievements:</strong> Returned 16,500 lander photographs, measured atmospheric temperature and pressure profiles during descent, and recorded wind patterns over an ancient Martian outflow channel.</p>
+          <p><strong>Mission History:</strong> Bounced 15 times inside giant airbag clusters before coming to rest at Ares Vallis. Its three solar-panel petals unfolded flawlessly, establishing the first Martian surface images since Viking in 1976.</p>
+          <p><strong>Final Known Status:</strong> The rechargeable silver-zinc battery succumbed to repeated freezing cycles. Final signal was logged on sol 83 (September 27, 1997). The lander rests on the plains of Ares Vallis.</p>
+          <p><strong>Historical Significance:</strong> Revolutionized planetary entry, descent, and landing (EDL), proving airbag systems that would later safely deliver Spirit and Opportunity.</p>
+        </div>
+
+        <!-- Panel 9: Phoenix Lander -->
+        <div id="story-phoenix" class="story-panel">
+          <div class="story-panel-header">
+            <h2>Phoenix Mars Lander</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-cyan">Landed May 25, 2008</span>
+              <span class="tag tag-cyan">Vastitas Borealis</span>
+              <span class="final-status silent">Final Transmission: Nov 2, 2008</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Study the history of water in all its phases in the Martian northern arctic plains, and assess the habitability of the sub-surface permafrost.</p>
+          <p><strong>Scientific Achievements:</strong> First spacecraft to physically scrape away Martian soil and directly expose bright patches of water ice that sublimated over several days. Discovered perchlorate salts and calcium carbonate, indicating a neutral pH past.</p>
+          <p><strong>Mission History:</strong> Touched down at 68.22&deg; N latitude using pulsed thrusters. Its 2.35-meter robotic arm scooped soil into miniature thermal and chemical ovens (TEGA and MECA), confirming water vapor emissions upon heating.</p>
+          <p><strong>Final Known Status:</strong> Designed for summer operations only. As Martian polar winter approached, sunlight dwindled. The lander went silent on November 2, 2008. Orbital images later revealed that its solar panels collapsed under the weight of hundreds of kilograms of carbon dioxide dry ice frost.</p>
+          <p><strong>Historical Significance:</strong> Provided incontrovertible ground-truth evidence that vast reservoirs of water ice exist just centimeters beneath the Martian surface.</p>
+        </div>
+
+        <!-- Panel 10: InSight Lander -->
+        <div id="story-insight" class="story-panel">
+          <div class="story-panel-header">
+            <h2>InSight Lander (SEIS &amp; HP3)</h2>
+            <div class="modal-stat-row" style="margin: 15px 0;">
+              <span class="tag tag-purple">Landed Nov 26, 2018</span>
+              <span class="tag tag-orange">Elysium Planitia</span>
+              <span class="final-status silent">Final Transmission: Dec 15, 2022</span>
+            </div>
+          </div>
+          <p><strong>Primary Purpose:</strong> Investigate the internal structure of Mars — determining the thickness of the crust, composition of the mantle, and size and physical state of the core.</p>
+          <p><strong>Scientific Achievements:</strong> Recorded 1,319 marsquakes, including a magnitude 4.7 monster event in May 2022. Revealed Mars has a molten metallic core with a radius of approximately 1,830 km, a surprisingly thin crust (20–40 km), and active tectonic faults in Cerberus Fossae.</p>
+          <p><strong>Mission History:</strong> Successfully deployed the French-built SEIS seismometer directly onto the ground with a protective wind and thermal shield. Operated for over 4 Earth years on Elysium Planitia.</p>
+          <p><strong>Final Known Status:</strong> Atmospheric dust steadily accumulated on its solar arrays. Despite innovative 'cleaning tricks' (dropping coarse sand to blow away fine dust), power dropped below operational thresholds. Last transmission was received on December 15, 2022.</p>
+          <p><strong>Historical Significance:</strong> Provided humanity's first comprehensive inner structural map of another rocky terrestrial planet, transforming comparative planetology.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. THE LAST WORDS SECTION
+       ============================================================ -->
+  <section id="last-words" class="section section-dark">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">CREATIVE NARRATION</span>
+        <h2 class="section-title">THE LAST WORDS</h2>
+        <p class="section-subtitle">
+          Poetic first-person narratives inspired by verified mission telemetry, engineering logs, and final planetary conditions.
+        </p>
+      </div>
+
+      <div class="last-words-grid">
+
+        <!-- Quote 1: Opportunity -->
+        <div class="quote-card fade-in-up delay-1">
+          <span class="fiction-badge">[CREATIVE FICTION &mdash; NOT ACTUAL NASA TRANSMISSIONS]</span>
+          <p class="quote-text">
+            "The sky above Perseverance Valley turned from gold to rust, then to midnight at noon. For fifteen years I tracked the ancient shorelines, chasing water that vanished billions of years before I opened my eyes. My solar cells are dark now, and the cold is creeping into my memory banks. I leave my tracks across forty-five kilometers of alien dust. Tell Earth I stood as long as I could."
+          </p>
+          <div class="quote-attribution">
+            <div class="quote-avatar">🔴</div>
+            <div>
+              <div class="quote-name">Opportunity (MER-B)</div>
+              <div class="quote-role">Perseverance Valley &bull; Sol 5111 (June 10, 2018)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 2: Spirit -->
+        <div class="quote-card fade-in-up delay-2">
+          <span class="fiction-badge">[CREATIVE FICTION &mdash; NOT ACTUAL NASA TRANSMISSIONS]</span>
+          <p class="quote-text">
+            "My five working wheels dug into the sulfate sand at Troy, and the earth wouldn't let me go. But even trapped, I watched the Martian seasons roll across the Columbia Hills. The winter sun is sinking below the ridge, too low to charge my heaters. I gave you boiling hot springs and proof that this desert was once alive with warmth. Sleep comes softly when your work is finished."
+          </p>
+          <div class="quote-attribution">
+            <div class="quote-avatar">🔴</div>
+            <div>
+              <div class="quote-name">Spirit (MER-A)</div>
+              <div class="quote-role">Troy, Gusev Crater &bull; Sol 2210 (March 22, 2010)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 3: InSight -->
+        <div class="quote-card fade-in-up delay-3">
+          <span class="fiction-badge">[CREATIVE FICTION &mdash; NOT ACTUAL NASA TRANSMISSIONS]</span>
+          <p class="quote-text">
+            "My power is really low today, so this may be the last image I send. Don't worry about me though: my time here has been both productive and serene. If I can keep talking to my mission team, I will &mdash; but I'll be signing off here soon. I felt the pulse of this world. I listened to thirteen hundred heartbeats inside its core. Thank you for staying with me."
+          </p>
+          <div class="quote-attribution">
+            <div class="quote-avatar">🔴</div>
+            <div>
+              <div class="quote-name">InSight Lander</div>
+              <div class="quote-role">Elysium Planitia &bull; Sol 1446 (December 15, 2022)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 4: Phoenix -->
+        <div class="quote-card fade-in-up delay-4">
+          <span class="fiction-badge">[CREATIVE FICTION &mdash; NOT ACTUAL NASA TRANSMISSIONS]</span>
+          <p class="quote-text">
+            "The arctic frost is forming along my robotic arm. I tasted the ice hidden beneath the red dust &mdash; real water, crystallized in the dark for epochs. The polar sun has dropped beneath the horizon for the long northern winter, and the carbon ice will soon cover my deck. I came to the edge of the world to touch the water. Mission accomplished."
+          </p>
+          <div class="quote-attribution">
+            <div class="quote-avatar">❄️</div>
+            <div>
+              <div class="quote-name">Phoenix Lander</div>
+              <div class="quote-role">Green Valley, Vastitas Borealis &bull; Sol 157 (Nov 2, 2008)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 5: Apollo 11 Eagle -->
+        <div class="quote-card fade-in-up delay-5">
+          <span class="fiction-badge">[CREATIVE FICTION &mdash; NOT ACTUAL NASA TRANSMISSIONS]</span>
+          <p class="quote-text">
+            "They climbed back into the ascent stage and fired their engine to rejoin the home ship in orbit. Below them, my four golden legs remained rooted in the dust of Tranquility Base. Across my ladder plate are engraved the words: 'Here men from the planet Earth first set foot upon the Moon. We came in peace for all mankind.' The bootprints remain undisturbed beside me. I am humanity's open doorway."
+          </p>
+          <div class="quote-attribution">
+            <div class="quote-avatar">🌕</div>
+            <div>
+              <div class="quote-name">Apollo 11 LM Eagle Descent Stage</div>
+              <div class="quote-role">Tranquility Base, Mare Tranquillitatis &bull; July 21, 1969</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 6: Apollo 17 Rover -->
+        <div class="quote-card fade-in-up delay-6">
+          <span class="fiction-badge">[CREATIVE FICTION &mdash; NOT ACTUAL NASA TRANSMISSIONS]</span>
+          <p class="quote-text">
+            "Commander Cernan pointed my camera toward the ascent stage and parked me on the knoll. For fifty-four years, the Earth has hung suspended in the black sky above my antenna, a glowing blue marble that never sets. No wind has disturbed the tire tracks in Taurus-Littrow. I am waiting for the footsteps of the next generation to return."
+          </p>
+          <div class="quote-attribution">
+            <div class="quote-avatar">🌕</div>
+            <div>
+              <div class="quote-name">Apollo 17 Lunar Rover (LRV-3)</div>
+              <div class="quote-role">Taurus-Littrow Valley &bull; December 14, 1972</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. INTERACTIVE TIMELINE SECTION
+       ============================================================ -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">CHRONOLOGY OF DISCOVERY</span>
+        <h2 class="section-title">INTERACTIVE TIMELINE</h2>
+        <p class="section-subtitle">
+          Six decades of planetary exploration: click any mission event from 1966 to 2022 to inspect flight data and historical milestones.
+        </p>
+      </div>
+
+      <!-- Mount container populated dynamically by js/timeline.js -->
+      <div id="timeline-container"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. THEN AND NOW SECTION
+       ============================================================ -->
+  <section id="then-now" class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">ORBITAL OBSERVATIONS</span>
+        <h2 class="section-title">THEN AND NOW</h2>
+        <p class="section-subtitle">
+          Authentic NASA mission surface photography compared with high-resolution orbital reconnaissance documenting current equipment status.
+        </p>
+      </div>
+
+      <div class="then-now-grid">
+
+        <!-- Comparison 1: Apollo 11 -->
+        <div class="then-now-card fade-in-up delay-1">
+          <div class="then-now-images">
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Apollo_11_Lunar_Module_Eagle_on_Moon.jpg/640px-Apollo_11_Lunar_Module_Eagle_on_Moon.jpg" alt="Apollo 11 on the Moon 1969" loading="lazy">
+              <span class="tn-label then">THEN &bull; 1969</span>
+            </div>
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Apollo_11_landing_site_LROC.jpg/640px-Apollo_11_landing_site_LROC.jpg" alt="Apollo 11 Tranquility Base orbital photograph by LRO" loading="lazy">
+              <span class="tn-label now">NOW &bull; LRO ORBITAL</span>
+            </div>
+          </div>
+          <div class="then-now-body">
+            <h3 class="then-now-title">Tranquility Base: Apollo 11</h3>
+            <p class="then-now-desc">
+              <strong>Then:</strong> Armstrong and Aldrin photograph the golden descent stage and deployed solar wind foil.<br>
+              <strong>Now:</strong> NASA's Lunar Reconnaissance Orbiter (LRO) clearly shows the Eagle descent stage casting its long shadow, with astronaut footprints preserved as dark pathways in the bright regolith.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comparison 2: Opportunity -->
+        <div class="then-now-card fade-in-up delay-2">
+          <div class="then-now-images">
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Opportunity_at_Endurance_Crater.jpg/640px-Opportunity_at_Endurance_Crater.jpg" alt="Opportunity on Mars surface" loading="lazy">
+              <span class="tn-label then">THEN &bull; 2004</span>
+            </div>
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Opportunity_Spotted_on_Mars_by_HiRISE.jpg/640px-Opportunity_Spotted_on_Mars_by_HiRISE.jpg" alt="Opportunity spotted by MRO HiRISE" loading="lazy">
+              <span class="tn-label now">NOW &bull; HiRISE ORBITAL</span>
+            </div>
+          </div>
+          <div class="then-now-body">
+            <h3 class="then-now-title">Opportunity: Perseverance Valley</h3>
+            <p class="then-now-desc">
+              <strong>Then:</strong> Fresh solar arrays reflecting sunlight across the plains of Meridiani Planum.<br>
+              <strong>Now:</strong> Photographed from 250 km altitude by the Mars Reconnaissance Orbiter's HiRISE camera. Opportunity appears as a tiny bright dot perched silently along the slope of Endeavour Crater.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comparison 3: Apollo 17 Rover -->
+        <div class="then-now-card fade-in-up delay-3">
+          <div class="then-now-images">
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Apollo_17_Lunar_Rover_LRV.jpg/640px-Apollo_17_Lunar_Rover_LRV.jpg" alt="Apollo 17 Rover in 1972" loading="lazy">
+              <span class="tn-label then">THEN &bull; 1972</span>
+            </div>
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Apollo_17_landing_site_LROC.jpg/640px-Apollo_17_landing_site_LROC.jpg" alt="Apollo 17 site from LRO orbit" loading="lazy">
+              <span class="tn-label now">NOW &bull; LRO ORBITAL</span>
+            </div>
+          </div>
+          <div class="then-now-body">
+            <h3 class="then-now-title">Apollo 17: Taurus-Littrow</h3>
+            <p class="then-now-desc">
+              <strong>Then:</strong> Gene Cernan drives LRV-3 up the flanks of the South Massif to collect orange soil beads.<br>
+              <strong>Now:</strong> LROC imagery reveals the LM descent stage, the ALSEP station, and the LRV parked at the 'VIP site' where its camera captured humanity's final lunar departure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comparison 4: Spirit -->
+        <div class="then-now-card fade-in-up delay-4">
+          <div class="then-now-images">
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/640px-NASA_Mars_Rover.jpg" alt="Spirit Rover rolling on Mars" loading="lazy">
+              <span class="tn-label then">THEN &bull; 2004</span>
+            </div>
+            <div class="tn-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/InSight_lander_on_Mars.jpg/640px-InSight_lander_on_Mars.jpg" alt="Resting spacecraft on Mars surface" loading="lazy">
+              <span class="tn-label now">NOW &bull; SURFACE RECORD</span>
+            </div>
+          </div>
+          <div class="then-now-body">
+            <h3 class="then-now-title">Spirit: Troy Sands</h3>
+            <p class="then-now-desc">
+              <strong>Then:</strong> Ascending the summit of Husband Hill, gazing across the expansive basalt basin.<br>
+              <strong>Now:</strong> Resting in the soft sands of 'Troy' on the west side of Home Plate. While buried by Martian windblown dust, Spirit's chassis remains an unmoving testament to rover tenacity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. SPACE QUIZ SECTION
+       ============================================================ -->
+  <section id="quiz" class="section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">TEST YOUR KNOWLEDGE</span>
+        <h2 class="section-title">SPACE ARTIFACTS QUIZ</h2>
+        <p class="section-subtitle">
+          Test your mastery of lunar relics, Martian rovers, historical dates, and scientific milestones.
+        </p>
+      </div>
+
+      <!-- Mount container populated dynamically by js/quiz.js -->
+      <div id="quiz-container"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. SPACE LEGACY SECTION
+       ============================================================ -->
+  <section id="space-legacy" class="section section-dark">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">SCIENTIFIC &amp; CULTURAL HERITAGE</span>
+        <h2 class="section-title">SPACE LEGACY</h2>
+        <p class="section-subtitle">
+          Why abandoned lunar and Martian hardware constitutes humanity's most valuable planetary archive.
+        </p>
+      </div>
+
+      <div class="legacy-grid">
+
+        <!-- Pillar 1 -->
+        <div class="legacy-card fade-in-up delay-1">
+          <div class="legacy-icon">🔬</div>
+          <h3 class="legacy-title">Active Science in Perpetuity</h3>
+          <p class="legacy-desc">
+            Instruments like the Apollo 11, 14, and 15 Lunar Laser Retroreflectors have never stopped working. For over 55 years, they have enabled millimeter-level measurement of the Moon's orbit, confirming Einstein's General Relativity and revealing the fluid mechanics of the lunar core without using a single watt of electrical power.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="legacy-card fade-in-up delay-2">
+          <div class="legacy-icon">🏛️</div>
+          <h3 class="legacy-title">Extraterrestrial Archeology</h3>
+          <p class="legacy-desc">
+            Tranquility Base and Gusev Crater are the prehistoric campsites of the space age. The footprints of Armstrong and Aldrin, the tire tracks of the Apollo rovers, and the wheel paths of Spirit and Opportunity represent the physical genesis of humanity as a multi-planetary species. Protecting these sites preserves our civilizational heritage.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="legacy-card fade-in-up delay-3">
+          <div class="legacy-icon">🛡️</div>
+          <h3 class="legacy-title">Crucible for Artemis &amp; Mars</h3>
+          <p class="legacy-desc">
+            Every abandoned spacecraft acts as a multi-decade natural exposure experiment. Studying how silicone, aluminum alloys, optical lenses, and gold foil have survived 50+ years of cosmic radiation, micrometeoroids, and thermal cycling provides crucial engineering blueprints for enduring Artemis lunar bases and crewed Mars habitats.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       11. REFERENCES SECTION
+       ============================================================ -->
+  <section id="references" class="section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-tag">VERIFIED ARCHIVES</span>
+        <h2 class="section-title">REFERENCES &amp; CREDITS</h2>
+        <p class="section-subtitle">
+          All scientific achievements, mission chronologies, and hardware specifications derive from authentic NASA archives.
+        </p>
+      </div>
+
+      <div class="references-list fade-in-up">
+        <div class="ref-item">
+          <span class="ref-num">01</span>
+          <div class="ref-body">
+            <strong>NASA Solar System Exploration:</strong> Planetary missions, rovers, and landers database.
+            <a href="https://solarsystem.nasa.gov" target="_blank" rel="noopener noreferrer" class="ref-link">solarsystem.nasa.gov &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ref-item">
+          <span class="ref-num">02</span>
+          <div class="ref-body">
+            <strong>NASA Mars Exploration Program:</strong> Telemetry, science publications, and rover tracking for Spirit, Opportunity, and InSight.
+            <a href="https://mars.nasa.gov" target="_blank" rel="noopener noreferrer" class="ref-link">mars.nasa.gov &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ref-item">
+          <span class="ref-num">03</span>
+          <div class="ref-body">
+            <strong>NASA Lunar Reconnaissance Orbiter Camera (LROC):</strong> High-resolution orbital imagery of Apollo 11–17 landing sites (Arizona State University).
+            <a href="https://www.lroc.asu.edu" target="_blank" rel="noopener noreferrer" class="ref-link">lroc.asu.edu &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ref-item">
+          <span class="ref-num">04</span>
+          <div class="ref-body">
+            <strong>NASA Space Science Data Coordinated Archive (NSSDCA):</strong> Master catalog for Apollo Lunar Surface Experiments Packages (ALSEP) and Lunar Laser Ranging.
+            <a href="https://nssdc.gsfc.nasa.gov" target="_blank" rel="noopener noreferrer" class="ref-link">nssdc.gsfc.nasa.gov &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ref-item">
+          <span class="ref-num">05</span>
+          <div class="ref-body">
+            <strong>NASA Jet Propulsion Laboratory (JPL):</strong> California Institute of Technology &bull; Mars Pathfinder, Sojourner, and Phoenix mission records.
+            <a href="https://www.jpl.nasa.gov" target="_blank" rel="noopener noreferrer" class="ref-link">jpl.nasa.gov &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ref-item">
+          <span class="ref-num">06</span>
+          <div class="ref-body">
+            <strong>NASA History Division &bull; Apollo Program:</strong> Apollo 11–17 flight journals, surface transcripts, and Lunar Roving Vehicle technical specifications.
+            <a href="https://www.nasa.gov/mission_pages/apollo/" target="_blank" rel="noopener noreferrer" class="ref-link">nasa.gov/mission_pages/apollo &rarr;</a>
+          </div>
+        </div>
+
+        <div class="ref-item">
+          <span class="ref-num">07</span>
+          <div class="ref-body">
+            <strong>Image &amp; Data Credits:</strong> NASA / JPL-Caltech / Cornell University / Arizona State University / USGS Astrogeology Science Center / Smithsonian National Air and Space Museum.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EQUIPMENT MODAL OVERLAY
+       ============================================================ -->
+  <div id="equipment-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 class="modal-title">Equipment Profile</h2>
+          <div class="modal-mission" style="color: var(--accent-cyan); font-size: 0.85rem; margin-top: 4px;">Mission</div>
+          <div class="modal-date-range" style="color: var(--text-muted); font-size: 0.78rem;">Date Range</div>
+        </div>
+        <button class="modal-close" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div style="margin: 15px 0;">
+          <span class="modal-status status-badge">Active</span>
+        </div>
+        <div class="modal-profile"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scroll-top-btn" class="scroll-to-top" aria-label="Scroll back to top of page">&uarr;</button>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">THE LAST SIGNAL</div>
+      <p class="footer-team">
+        Developed with pride by <strong>Team ASTRAVYN</strong> for the <strong>NASA Space Apps Challenge 2026</strong>.
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.8rem; margin: 8px 0 20px;">
+        Challenge: <em>"Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars."</em>
+      </p>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#moon-archives">Moon Archives</a>
+        <a href="#mars-archives">Mars Archives</a>
+        <a href="#mission-stories">Mission Stories</a>
+        <a href="#last-words">The Last Words</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#then-now">Then &amp; Now</a>
+        <a href="#quiz">Space Quiz</a>
+        <a href="#space-legacy">Space Legacy</a>
+        <a href="#references">References</a>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <p class="footer-disclaimer">
+        Educational and non-commercial project. All photographs, space mission data, and NASA designations are the property of the National Aeronautics and Space Administration (NASA) and affiliated academic institutions. Fictional monologues under "The Last Words" are creative interpretations based on verified mission history and do not represent official NASA transmissions.
+      </p>
+
+      <p class="footer-copyright">
+        &copy; 2026 Team ASTRAVYN &bull; The Last Signal &bull; Ad Astra Per Aspera.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/timeline.js"></script>
+</body>
+</html>
